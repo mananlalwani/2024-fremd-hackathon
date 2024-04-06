@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Suicide Awareness",
+  title: "Suicide Awareness Site",
 };
 
 export default function RootLayout({

@@ -35,12 +35,16 @@ export default function Home() {
     () => {
       let elements = document.querySelectorAll("h1 span");
       const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+      //you can add new things by copy pasting the lines below and changing the text
       tl.to(elements, {
         duration: 2,
         text: " is common.",
       }).to(elements, {
-        duration: 6,
-        text: " is a serious issue that needs to be addressed.",
+        duration: 2,
+        text: " is addressable.",
+      }).to(elements, {
+        duration: 2,
+        text: " is preventable.",
       });
     },
     { scope: main }

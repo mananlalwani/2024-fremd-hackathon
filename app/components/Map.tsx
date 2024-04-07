@@ -34,19 +34,52 @@ import "leaflet-defaulticon-compatibility";
 
 import { GeoJsonObject } from "geojson";
 // END: Preserve spaces to avoid auto-sorting
-import { MapContainer, Marker, Popup, TileLayer, GeoJSON } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 import statesData from "./us-states.json";
 
+import Legend from "./Legend";
+
 export default function Map() {
+  const GeoJSONLayer = ({ data }:any) => {
+    const onEachFeature = (feature:any, layer:any) => {
+      if (feature.properties && (feature.properties.density || feature.properties.name))  {
+        const {name, density} = feature.properties
+        layer.on({
+          mouseover: function (e:any) {
+            this.bindTooltip(
+              `<strong>${name}</strong><br />${density}`,
+              {
+                permanent: true,
+                className: '',
+                direction: "top",
+              }
+            ).openTooltip();
+          },
+          mouseout: function (e:any) {
+            this.closeTooltip();
+          },
+        });
+        layer.setStyle({
+          fillColor: getColor(density),
+          weight: 2,
+          dashArray: "3",
+          fillOpacity: 0.7,
+        })
+      }
+    };
+
+    return <GeoJSON data={data} onEachFeature={onEachFeature} />;
+  };
+
   console.log(statesData);
   return (
     <MapContainer
       preferCanvas={true}
       center={[37.8, -96]}
-      zoom={3.65}
+      zoom={3.75}
       scrollWheelZoom={true}
-      style={{ height: "600px", width: "1200px" }}
+      style={{ height: "500px", width: "100%" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -54,7 +87,21 @@ export default function Map() {
         maxZoom={19}
       />
 
-      <GeoJSON data={statesData as GeoJsonObject} />
+      {/* <GeoJSON data={statesData as GeoJsonObject} /> */}
+      <GeoJSONLayer data={statesData} />
+
+      <Legend />
     </MapContainer>
   );
+}
+
+function getColor(density: any) {
+  return density > 25 ? "#800026" :
+    density > 23 ? "#BD0026" :
+    density > 21 ? "#E31A1C" :
+    density > 19 ? "#FC4E2A" :
+    density > 17 ? "#FD8D3C" :
+    density > 15 ? "#FEB24C" :
+    density > 13 ? "#FED976" :
+    "#FFEDA0";
 }

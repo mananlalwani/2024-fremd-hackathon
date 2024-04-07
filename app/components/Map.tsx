@@ -96,12 +96,11 @@ export default function Map() {
 }
 
 function getColor(density: any) {
-  return density > 25 ? "#800026" :
-    density > 23 ? "#BD0026" :
-    density > 21 ? "#E31A1C" :
-    density > 19 ? "#FC4E2A" :
-    density > 17 ? "#FD8D3C" :
-    density > 15 ? "#FEB24C" :
-    density > 13 ? "#FED976" :
-    "#FFEDA0";
+  return density > 25 ? "#08589e" :
+    density > 23 ? "#2b8cbe" :
+    density > 21 ? "#4eb3d3" :
+    density > 19 ? "#7bccc4" :
+    density > 17 ? "#a8ddb5" :
+    density > 15 ? "#ccebc5" :
+    "#f0f9e8";
 }

@@ -36,7 +36,7 @@ import { GeoJsonObject } from "geojson";
 // END: Preserve spaces to avoid auto-sorting
 import { MapContainer, Marker, Popup, TileLayer, GeoJSON } from "react-leaflet";
 
-import statesData from "./us-states.js";
+const statesData: GeoJsonObject = require("./us-states.geojson") as GeoJsonObject;
 
 export default function Map() {
   console.log(statesData);

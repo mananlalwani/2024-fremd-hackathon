@@ -14,8 +14,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* :root {
@@ -48,7 +48,6 @@ body {
   }
 }
 
-
 /* Typography */
 
 @font-face {
@@ -56,7 +55,7 @@ body {
   font-family: Mori;
   font-style: normal;
   font-weight: 400;
-  src: url(https://gsap.com/fonts/Mori/PPMori-Regular.woff) format('woff');
+  src: url(https://gsap.com/fonts/Mori/PPMori-Regular.woff) format("woff");
 }
 
 @font-face {
@@ -64,7 +63,7 @@ body {
   font-family: Mori;
   font-style: normal;
   font-weight: 600;
-  src: url(https://gsap.com/fonts/Mori/PPMori-SemiBold.woff) format('woff');
+  src: url(https://gsap.com/fonts/Mori/PPMori-SemiBold.woff) format("woff");
 }
 
 @font-face {
@@ -72,8 +71,7 @@ body {
   font-family: Fraktion Mono;
   font-style: normal;
   font-weight: 400;
-  src: url(https://gsap.com/fonts/Fraktion/PPFraktionMono-Bold.woff)
-    format('woff');
+  src: url(https://gsap.com/fonts/Fraktion/PPFraktionMono-Bold.woff) format("woff");
 }
 
 :root {
@@ -90,41 +88,13 @@ body {
   --color-surface75: #bbbaa6;
   --color-surface50: #7c7c6f;
   --color-surface25: #42433d;
-  --gradient-macha: linear-gradient(
-    114.41deg,
-    var(--color-shockingly-green) 20.74%,
-    var(--color-lt-green) 65.5%
-  );
-  --gradient-orange-crush: linear-gradient(
-    111.45deg,
-    var(--color-orangey) 19.42%,
-    #f7bdf8 73.08%
-  );
-  --gradient-lipstick: linear-gradient(
-    165.72deg,
-    #f7bdf8 21.15%,
-    #cd237f 81.93%
-  );
-  --gradient-purple-haze: linear-gradient(
-    153.58deg,
-    #f7bdf8 32.25%,
-    #2f3cc0 92.68%
-  );
-  --gradient-skyfall: linear-gradient(
-    131.77deg,
-    #0a157a 30.82%,
-    #15bfe4 81.82%
-  );
-  --gradient-emerald-city: linear-gradient(
-    166.9deg,
-    var(--color-shockingly-green) 53.19%,
-    #0085d0 107.69%
-  );
-  --gradient-summer-fair: linear-gradient(
-    144.02deg,
-    var(--color-blue) 4.56%,
-    var(--color-pink) 72.98%
-  );
+  --gradient-macha: linear-gradient(114.41deg, var(--color-shockingly-green) 20.74%, var(--color-lt-green) 65.5%);
+  --gradient-orange-crush: linear-gradient(111.45deg, var(--color-orangey) 19.42%, #f7bdf8 73.08%);
+  --gradient-lipstick: linear-gradient(165.72deg, #f7bdf8 21.15%, #cd237f 81.93%);
+  --gradient-purple-haze: linear-gradient(153.58deg, #f7bdf8 32.25%, #2f3cc0 92.68%);
+  --gradient-skyfall: linear-gradient(131.77deg, #0a157a 30.82%, #15bfe4 81.82%);
+  --gradient-emerald-city: linear-gradient(166.9deg, var(--color-shockingly-green) 53.19%, #0085d0 107.69%);
+  --gradient-summer-fair: linear-gradient(144.02deg, var(--color-blue) 4.56%, var(--color-pink) 72.98%);
   --color-core-green: #dfffd1;
   --color-core-green-lt: #f3ffee;
   --color-core-gradient: radial-gradient(
@@ -134,57 +104,22 @@ body {
     #abff84 77.6%,
     #2fee65 100%
   );
-  --color-core-button-gradient: linear-gradient(
-    114.41deg,
-    #0ae448 20.74%,
-    #abff84 65.5%
-  );
-  --color-core-heading-gradient: linear-gradient(
-      180deg,
-      #d6ffc3 0%,
-      rgba(214, 255, 195, 0) 100%
-    ),
-    #f3ffee;
-  --color-core-intro-gradient: linear-gradient(
-      144.5deg,
-      #e8ffdd 65.09%,
-      #7dea7b 122.73%
-    ),
+  --color-core-button-gradient: linear-gradient(114.41deg, #0ae448 20.74%, #abff84 65.5%);
+  --color-core-heading-gradient: linear-gradient(180deg, #d6ffc3 0%, rgba(214, 255, 195, 0) 100%), #f3ffee;
+  --color-core-intro-gradient: linear-gradient(144.5deg, #e8ffdd 65.09%, #7dea7b 122.73%),
     linear-gradient(311.31deg, #7ef89e 36.08%, #e5ffd9 106.98%);
   --color-text-purple: #d2ceff;
   --color-text-purple-lt: #dfdcff;
-  --color-text-gradient: radial-gradient(
-    129.03% 100% at 120.97% 81.45%,
-    #dfdcff 27.08%,
-    #a69eff 100%
-  );
+  --color-text-gradient: radial-gradient(129.03% 100% at 120.97% 81.45%, #dfdcff 27.08%, #a69eff 100%);
   --color-svg-tangerine: #ffe3c7;
   --color-svg-tangerine-lt: #fff0e0;
-  --color-svg-gradient: radial-gradient(
-    70.77% 70.77% at 0% 70.77%,
-    #ffd9b0 0%,
-    #fd9f3b 80.73%,
-    #ff8709 100%
-  );
-  --color-svg-heading-gradient: linear-gradient(
-      180deg,
-      #ffbd77 0%,
-      rgba(254, 197, 251, 0) 100%
-    ),
-    #ffe4c7;
+  --color-svg-gradient: radial-gradient(70.77% 70.77% at 0% 70.77%, #ffd9b0 0%, #fd9f3b 80.73%, #ff8709 100%);
+  --color-svg-heading-gradient: linear-gradient(180deg, #ffbd77 0%, rgba(254, 197, 251, 0) 100%), #ffe4c7;
   --color-ui-blue: #bef3fe;
   --color-ui-blue-lt: #e1faff;
   --color-ui-blue-codeblk: #f6feff;
-  --color-ui-text-gradient: linear-gradient(
-    168.89deg,
-    #fec5fb -21.3%,
-    #00bae2 89.88%
-  );
-  --color-ui-code-blocktext-gradient: linear-gradient(
-    142.91deg,
-    #cef6ff 18.75%,
-    #a6efff 54.93%
-  );
+  --color-ui-text-gradient: linear-gradient(168.89deg, #fec5fb -21.3%, #00bae2 89.88%);
+  --color-ui-code-blocktext-gradient: linear-gradient(142.91deg, #cef6ff 18.75%, #a6efff 54.93%);
   --color-ui-gradient: radial-gradient(
     78.77% 78.77% at 71.71% 30.77%,
     #f0fcff 0%,
@@ -193,11 +128,7 @@ body {
     #5be1ff 84.9%,
     #00bae2 94.79%
   );
-  --color-ui-gradient-background: linear-gradient(
-    137.1deg,
-    #ecfcff 27.5%,
-    #a6efff 94.09%
-  );
+  --color-ui-gradient-background: linear-gradient(137.1deg, #ecfcff 27.5%, #a6efff 94.09%);
   --color-ui-gradient-flip-background: radial-gradient(
     140% 190% at 117.54% 131.12%,
     #f0fcff 0%,
@@ -208,11 +139,7 @@ body {
   );
   --color-scroll-pink: #ffd7fd;
   --color-scroll-pink-lt: #ffe9fe;
-  --color-scroll-gradient: linear-gradient(
-    317.42deg,
-    #ffe9fe 10.4%,
-    #ff96f9 83.03%
-  );
+  --color-scroll-gradient: linear-gradient(317.42deg, #ffe9fe 10.4%, #ff96f9 83.03%);
   --ease-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.86, 0, 0.07, 1);
@@ -244,8 +171,7 @@ body {
 
   --fluid-screen: 100vw;
   --fluid-bp: calc(
-    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
-      (var(--fluid-max-width) - var(--fluid-min-width))
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width))
   );
 }
 
@@ -258,38 +184,23 @@ body {
 :root {
   --f-0-min: 16;
   --f-0-max: 18;
-  --step-0: calc(
-    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
-      var(--fluid-bp)
-  );
+  --step-0: calc(((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) * var(--fluid-bp));
 
   --f-1-min: 16;
   --f-1-max: 22.5;
-  --step-1: calc(
-    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
-      var(--fluid-bp)
-  );
+  --step-1: calc(((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) * var(--fluid-bp));
 
   --f-2-min: 23.04;
   --f-2-max: 28.13;
-  --step-2: calc(
-    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
-      var(--fluid-bp)
-  );
+  --step-2: calc(((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) * var(--fluid-bp));
 
   --f-3-min: 27.65;
   --f-3-max: 35.16;
-  --step-3: calc(
-    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
-      var(--fluid-bp)
-  );
+  --step-3: calc(((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) * var(--fluid-bp));
 
   --f-4-min: 33.18;
   --f-4-max: 46;
-  --step-4: calc(
-    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
-      var(--fluid-bp)
-  );
+  --step-4: calc(((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) * var(--fluid-bp));
 }
 
 /* fluid paddings */
@@ -300,8 +211,7 @@ body {
 
   --fluid-screen: 100vw;
   --fluid-bp: calc(
-    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
-      (var(--fluid-max-width) - var(--fluid-min-width))
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) / (var(--fluid-max-width) - var(--fluid-min-width))
   );
 }
 
@@ -325,36 +235,15 @@ body {
   --fc-xl-max: (var(--fc-s-max) * 10);
 
   /* T-shirt sizes */
-  --space-s: calc(
-    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) *
-      var(--fluid-bp)
-  );
-  --space-m: calc(
-    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) *
-      var(--fluid-bp)
-  );
-  --space-l: calc(
-    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) *
-      var(--fluid-bp)
-  );
-  --space-xl: calc(
-    ((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) *
-      var(--fluid-bp)
-  );
+  --space-s: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) * var(--fluid-bp));
+  --space-m: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) * var(--fluid-bp));
+  --space-l: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) * var(--fluid-bp));
+  --space-xl: calc(((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) * var(--fluid-bp));
 
   /* One-up pairs */
-  --space-s-m: calc(
-    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) *
-      var(--fluid-bp)
-  );
-  --space-m-l: calc(
-    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) *
-      var(--fluid-bp)
-  );
-  --space-l-xl: calc(
-    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) *
-      var(--fluid-bp)
-  );
+  --space-s-m: calc(((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) * var(--fluid-bp));
+  --space-m-l: calc(((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) * var(--fluid-bp));
+  --space-l-xl: calc(((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) * var(--fluid-bp));
 }
 
 /* commonly used utils */
@@ -545,7 +434,6 @@ button {
   line-height: 18px;
 }
 
-
 /* SCROLL DOWN */
 .scroll-down {
   position: absolute;
@@ -600,7 +488,9 @@ button {
 }
 
 h1 span {
-  color:var(--color-shockingly-green);
+  color: var(--color-shockingly-green);
 }
 
-#map { height: 180px; }
+#map {
+  height: 180px;
+}

@@ -41,22 +41,20 @@ import statesData from "./us-states.json";
 export default function Map() {
   console.log(statesData);
   return (
-      <MapContainer
-        preferCanvas={true}
-        center={[37.8, -96]}
-        zoom={3.65}
-        scrollWheelZoom={true}
-        style={{ height: "600px", width: "1200px" }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          maxZoom={19}
+    <MapContainer
+      preferCanvas={true}
+      center={[37.8, -96]}
+      zoom={3.65}
+      scrollWheelZoom={true}
+      style={{ height: "600px", width: "1200px" }}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        maxZoom={19}
+      />
 
-        />
-       
-        <GeoJSON data={statesData as GeoJsonObject} />
-        
-      </MapContainer>
+      <GeoJSON data={statesData as GeoJsonObject} />
+    </MapContainer>
   );
 }

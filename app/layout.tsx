@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   title: "Suicide Awareness Site",
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,10 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="corporate">
-      <body className={inter.className}>
-
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

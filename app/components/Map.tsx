@@ -54,11 +54,7 @@ export default function Map() {
           maxZoom={19}
 
         />
-        <Marker position={[37.8, -96]}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+       
         <GeoJSON data={statesData as GeoJsonObject} />
         
       </MapContainer>

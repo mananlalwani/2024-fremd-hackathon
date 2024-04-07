@@ -365,8 +365,8 @@ body {
 }
 
 body {
-  color: var(--color-surface-white);
-  background-color: var(--dark);
+  color: var(--color-just-black);
+  background-color: var(--light);
   font-family: Mori, sans-serif;
   font-weight: 400;
   margin: 0;

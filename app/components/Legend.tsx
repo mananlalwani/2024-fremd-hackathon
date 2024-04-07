@@ -1,28 +1,62 @@
-import { useEffect } from "react";
-import L, { Control } from "leaflet";
+import L from "leaflet";
+import { useMap } from "react-leaflet";
 import "./Legend.css";
+import { useEffect } from "react";
 
-class LegendControl extends Control {
- constructor(options:any) {
-    super(options);
- }
+function Legend() {
+  /*
+  const map = useMap();
 
- onAdd(map:any) {
-    const div = L.DomUtil.create("div", "info legend");
-    div.innerHTML =
-      "<h4>This is the legend</h4>" +
-      "<b>Lorem ipsum dolor sit amet consectetur adipiscing</b>";
+  const legend = new L.Control({ position: 'bottomright' });
+
+  legend.onAdd = () => {
+    const div = L.DomUtil.create("div", "legend");
+    div.innerHTML = `
+      <h3>Legend</h3>
+      <div><span style="background-color: #800026; width: 20px; height: 20px; display: inline-block;"></span> >25%</div>
+      <div><span style="background-color: #BD0026; width: 20px; height: 20px; display: inline-block;"></span> 23-25%</div>
+      <div><span style="background-color: #E31A1C; width: 20px; height: 20px; display: inline-block;"></span> 21-23%</div>
+      <div><span style="background-color: #FC4E2A; width: 20px; height: 20px; display: inline-block;"></span> 19-21%</div>
+      <div><span style="background-color: #FD8D3C; width: 20px; height: 20px; display: inline-block;"></span> 17-19%</div>
+      <div><span style="background-color: #FEB24C; width: 20px; height: 20px; display: inline-block;"></span> 15-17%</div>
+      <div><span style="background-color: #FFEDA0; width: 20px; height: 20px; display: inline-block;"></span> No Data</div> 
+
+      <!-- Add more legend items as needed -->
+    `;
     return div;
- }
-}
+  };
 
-function Legend({ map }:any) {
-  console.log(map);
+  legend.addTo(map);
+
+  return null;*/
+
+  const map = useMap();
   useEffect(() => {
-    if (map) {
-      const legend = new LegendControl({ position: "bottomright" });
-    }
+    const legend = new L.Control({ position: "bottomright" });
+
+    legend.onAdd = () => {
+      const div = L.DomUtil.create("div", "legend");
+      div.innerHTML = `
+        <h3>Legend</h3>
+        <div><span style="background-color: #800026; width: 20px; height: 20px; display: inline-block;"></span> >25%</div>
+      <div><span style="background-color: #BD0026; width: 20px; height: 20px; display: inline-block;"></span> 23-25%</div>
+      <div><span style="background-color: #E31A1C; width: 20px; height: 20px; display: inline-block;"></span> 21-23%</div>
+      <div><span style="background-color: #FC4E2A; width: 20px; height: 20px; display: inline-block;"></span> 19-21%</div>
+      <div><span style="background-color: #FD8D3C; width: 20px; height: 20px; display: inline-block;"></span> 17-19%</div>
+      <div><span style="background-color: #FEB24C; width: 20px; height: 20px; display: inline-block;"></span> 15-17%</div>
+      <div><span style="background-color: #FFEDA0; width: 20px; height: 20px; display: inline-block;"></span> No Data</div> 
+
+      `;
+      return div;
+    };
+
+    legend.addTo(map);
+
+    return () => {
+      legend.remove();
+    };
   }, [map]);
+
   return null;
 }
 

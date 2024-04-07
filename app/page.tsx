@@ -13,7 +13,6 @@ export default function Home() {
       <WholeTextThingy />
       <h2>Percent of High School Students who Seriously Considered Suicide </h2>
       <LazyMap />
-      If the data is 0, there was no recent information available.
     </div>
   );
 }

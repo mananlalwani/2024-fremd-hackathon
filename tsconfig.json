@@ -22,6 +22,6 @@
     },
     "types": ["@cloudflare/workers-types/2023-07-01"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ai/page.tsx", "app/components/Map.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/ai/page.tsx", "app/components/Map.tsx", "app/components/us-states.js"],
   "exclude": ["node_modules"]
 }

@@ -1,35 +1,46 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { TextPlugin } from 'gsap/dist/TextPlugin';
-import { useGSAP } from '@gsap/react';
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from "gsap/TextPlugin";
+import { useGSAP } from "@gsap/react";
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-  gsap.registerPlugin(TextPlugin, useGSAP);
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
 }
 
 export default function Home() {
   const main = useRef<HTMLElement | any>();
-
+  gsap.defaults({ ease: "none" });
+  useGSAP(() => {
+    const boxes = gsap.utils.toArray(".box") as HTMLElement[];
+    boxes.forEach((box: HTMLElement) => {
+      gsap.set(box, { x: -200 });
+      gsap.to(box, {
+        x: 200,
+        scrollTrigger: {
+          trigger: box,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          //this is for debugging purposes
+          // markers: true,
+        },
+      });
+    });
+  }),
+    { scope: main };
   useGSAP(
     () => {
-      const boxes = gsap.utils.toArray('.box') as HTMLElement[];
-      boxes.forEach((box: HTMLElement) => {
-        gsap.set(box, { x: -200 });
-        gsap.to(box, {
-          x: 200,
-          scrollTrigger: {
-            trigger: box,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: true,
-            //this is for debugging purposes
-            // markers: true,
-          },
-        });
+      let elements = document.querySelectorAll("h1 span");
+      const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+      tl.to(elements, {
+        duration: 2,
+        text: " is common.",
+      }).to(elements, {
+        duration: 6,
+        text: " is a serious issue that needs to be addressed.",
       });
     },
     { scope: main }
@@ -38,20 +49,38 @@ export default function Home() {
   return (
     <div>
       <section className="section flex-center column">
-        <h1>Suicide is common</h1>
+        <h1>
+          Suicide<span className="hi"> is </span>
+        </h1>
       </section>
+      <br />
+      <br />
+      {/* Put a downward arrow here */}
+
+      <br />
+      <br />
+      <br />
       <div className="section flex-center column" ref={main}>
         <div className="box">Stat here</div>
         <br />
         <br />
         <br />
+        <br />
         <div className="box">Stat here</div>
+        <br />
         <br />
         <br />
         <br />
         <div className="box">Stat here</div>
       </div>
-      <section className="section"></section>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <section className="section flex-center column">
+        <h1 className="blue">Suicide is addressable.</h1>
+      </section>
     </div>
   );
 }

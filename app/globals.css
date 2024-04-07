@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*:root {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -372,17 +388,18 @@ body {
 }
 
 .box {
-  width: 150px;
-  height: 150px;
+  width: fit-content;
+  height: fit-content;
   border-radius: 24px;
+  padding: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--green);
+  background-color: var(--color-shockingly-pink);
   font-weight: 600;
   color: var(--dark);
-  line-height: 1.2;
+  line-height: 1.4;
   will-change: transform;
 }
 
@@ -580,4 +597,8 @@ button {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+h1 span {
+  color:var(--color-shockingly-green);
 }

@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*:root {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -31,3 +47,560 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* Typography */
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://gsap.com/fonts/Mori/PPMori-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: Mori;
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://gsap.com/fonts/Mori/PPMori-SemiBold.woff) format('woff');
+}
+
+@font-face {
+  font-display: block;
+  font-family: Fraktion Mono;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://gsap.com/fonts/Fraktion/PPFraktionMono-Bold.woff)
+    format('woff');
+}
+
+:root {
+  --color-shockingly-green: #0ae448;
+  --color-just-black: #0e100f;
+  --color-surface-white: #fffce1;
+  --color-pink: #fec5fb;
+  --color-shockingly-pink: #f100cb;
+  --color-orangey: #ff8709;
+  --color-lilac: #9d95ff;
+  --color-lt-green: #abff84;
+  --color-blue: #00bae2;
+  --color-grey: gray;
+  --color-surface75: #bbbaa6;
+  --color-surface50: #7c7c6f;
+  --color-surface25: #42433d;
+  --gradient-macha: linear-gradient(
+    114.41deg,
+    var(--color-shockingly-green) 20.74%,
+    var(--color-lt-green) 65.5%
+  );
+  --gradient-orange-crush: linear-gradient(
+    111.45deg,
+    var(--color-orangey) 19.42%,
+    #f7bdf8 73.08%
+  );
+  --gradient-lipstick: linear-gradient(
+    165.72deg,
+    #f7bdf8 21.15%,
+    #cd237f 81.93%
+  );
+  --gradient-purple-haze: linear-gradient(
+    153.58deg,
+    #f7bdf8 32.25%,
+    #2f3cc0 92.68%
+  );
+  --gradient-skyfall: linear-gradient(
+    131.77deg,
+    #0a157a 30.82%,
+    #15bfe4 81.82%
+  );
+  --gradient-emerald-city: linear-gradient(
+    166.9deg,
+    var(--color-shockingly-green) 53.19%,
+    #0085d0 107.69%
+  );
+  --gradient-summer-fair: linear-gradient(
+    144.02deg,
+    var(--color-blue) 4.56%,
+    var(--color-pink) 72.98%
+  );
+  --color-core-green: #dfffd1;
+  --color-core-green-lt: #f3ffee;
+  --color-core-gradient: radial-gradient(
+    89.08% 84.62% at 16.54% 78.46%,
+    #fbfefa 0%,
+    #c9f6b4 39.58%,
+    #abff84 77.6%,
+    #2fee65 100%
+  );
+  --color-core-button-gradient: linear-gradient(
+    114.41deg,
+    #0ae448 20.74%,
+    #abff84 65.5%
+  );
+  --color-core-heading-gradient: linear-gradient(
+      180deg,
+      #d6ffc3 0%,
+      rgba(214, 255, 195, 0) 100%
+    ),
+    #f3ffee;
+  --color-core-intro-gradient: linear-gradient(
+      144.5deg,
+      #e8ffdd 65.09%,
+      #7dea7b 122.73%
+    ),
+    linear-gradient(311.31deg, #7ef89e 36.08%, #e5ffd9 106.98%);
+  --color-text-purple: #d2ceff;
+  --color-text-purple-lt: #dfdcff;
+  --color-text-gradient: radial-gradient(
+    129.03% 100% at 120.97% 81.45%,
+    #dfdcff 27.08%,
+    #a69eff 100%
+  );
+  --color-svg-tangerine: #ffe3c7;
+  --color-svg-tangerine-lt: #fff0e0;
+  --color-svg-gradient: radial-gradient(
+    70.77% 70.77% at 0% 70.77%,
+    #ffd9b0 0%,
+    #fd9f3b 80.73%,
+    #ff8709 100%
+  );
+  --color-svg-heading-gradient: linear-gradient(
+      180deg,
+      #ffbd77 0%,
+      rgba(254, 197, 251, 0) 100%
+    ),
+    #ffe4c7;
+  --color-ui-blue: #bef3fe;
+  --color-ui-blue-lt: #e1faff;
+  --color-ui-blue-codeblk: #f6feff;
+  --color-ui-text-gradient: linear-gradient(
+    168.89deg,
+    #fec5fb -21.3%,
+    #00bae2 89.88%
+  );
+  --color-ui-code-blocktext-gradient: linear-gradient(
+    142.91deg,
+    #cef6ff 18.75%,
+    #a6efff 54.93%
+  );
+  --color-ui-gradient: radial-gradient(
+    78.77% 78.77% at 71.71% 30.77%,
+    #f0fcff 0%,
+    #9bedff 67.21%,
+    #98ecff 76.04%,
+    #5be1ff 84.9%,
+    #00bae2 94.79%
+  );
+  --color-ui-gradient-background: linear-gradient(
+    137.1deg,
+    #ecfcff 27.5%,
+    #a6efff 94.09%
+  );
+  --color-ui-gradient-flip-background: radial-gradient(
+    140% 190% at 117.54% 131.12%,
+    #f0fcff 0%,
+    #9bedff 25.52%,
+    #98ecff 42.71%,
+    #5be1ff 60.94%,
+    #00bae2 94.79%
+  );
+  --color-scroll-pink: #ffd7fd;
+  --color-scroll-pink-lt: #ffe9fe;
+  --color-scroll-gradient: linear-gradient(
+    317.42deg,
+    #ffe9fe 10.4%,
+    #ff96f9 83.03%
+  );
+  --ease-in: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-out-quart: cubic-bezier(0.175, 0.79, 0.38, 0.905);
+  --ease-in-out-quart: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+:root {
+  --dark: var(--color-just-black);
+  --grey-dark: #42433d;
+  --light: var(--color-surface-white);
+  --mid: #7c7c6f;
+  --grey: #gray;
+  --gray: #gray;
+  --green: var(--color-shockingly-green);
+  --green-dark: #0ae448;
+  --green-light: var(--color-lt-green);
+  --blue: var(--color-blue);
+  --purple: var(--color-lilac);
+  --red: #cd237f;
+  --orange: var(--color-orangey);
+  accent-color: var(--color-shockingly-green);
+}
+/* lovely fluid fonts */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --f-0-min: 16;
+  --f-0-max: 18;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-1-min: 16;
+  --f-1-max: 22.5;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-2-min: 23.04;
+  --f-2-max: 28.13;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-3-min: 27.65;
+  --f-3-max: 35.16;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-4-min: 33.18;
+  --f-4-max: 46;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+}
+
+/* fluid paddings */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --fc-s-min: (var(--f-0-min, 21));
+  --fc-s-max: (var(--f-0-max, 24));
+
+  --fc-m-min: (var(--fc-s-min) * 6);
+  --fc-m-max: (var(--fc-s-max) * 6);
+
+  --fc-l-min: (var(--fc-s-min) * 8);
+  --fc-l-max: (var(--fc-s-max) * 8);
+
+  --fc-xl-min: (var(--fc-s-min) * 10);
+  --fc-xl-max: (var(--fc-s-max) * 10);
+
+  /* T-shirt sizes */
+  --space-s: calc(
+    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-s-max) - var(--fc-s-min)) *
+      var(--fluid-bp)
+  );
+  --space-m: calc(
+    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-m-min)) *
+      var(--fluid-bp)
+  );
+  --space-l: calc(
+    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-l-min)) *
+      var(--fluid-bp)
+  );
+  --space-xl: calc(
+    ((var(--fc-xl-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-xl-min)) *
+      var(--fluid-bp)
+  );
+
+  /* One-up pairs */
+  --space-s-m: calc(
+    ((var(--fc-s-min) / 16) * 1rem) + (var(--fc-m-max) - var(--fc-s-min)) *
+      var(--fluid-bp)
+  );
+  --space-m-l: calc(
+    ((var(--fc-m-min) / 16) * 1rem) + (var(--fc-l-max) - var(--fc-m-min)) *
+      var(--fluid-bp)
+  );
+  --space-l-xl: calc(
+    ((var(--fc-l-min) / 16) * 1rem) + (var(--fc-xl-max) - var(--fc-l-min)) *
+      var(--fluid-bp)
+  );
+}
+
+/* commonly used utils */
+
+.pad-s {
+  padding-top: var(--space-s);
+  padding-bottom: var(--space-s);
+}
+
+.pad-m {
+  padding-top: var(--space-m);
+  padding-bottom: var(--space-m);
+}
+
+.pad-l {
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-l);
+}
+
+.pad-xl {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.flow > * + * {
+  margin-top: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 24px;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-shockingly-pink);
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  will-change: transform;
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--green);
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.2;
+  will-change: transform;
+}
+
+/* always doing this */
+.flex-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* and this */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* colors */
+
+.green {
+  background-color: var(--green);
+}
+.blue {
+  background-color: var(--blue);
+}
+.purple {
+  background-color: var(--purple);
+}
+.red {
+  background-color: var(--red);
+}
+.orange {
+  background-color: var(--orange);
+}
+
+.dark {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.light {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.gray,
+.grey {
+  background-color: var(--grey);
+}
+
+body {
+  color: var(--color-surface-white);
+  background-color: var(--dark);
+  font-family: Mori, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  font-size: var(--step-0);
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 10px 0 10px 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1,
+.h1 {
+  font-size: var(--step-4);
+}
+
+h2,
+.h2 {
+  font-size: var(--step-3);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-2);
+}
+
+h4,
+.h4,
+.lead {
+  font-size: var(--step-1);
+}
+
+a {
+  color: var(--green);
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.light a {
+  color: var(--green-dark);
+}
+
+/* button:not('.box') { breaking for some reason in codepen? */
+button {
+  display: inline-block;
+  outline: none;
+  padding: 8px 14px;
+  background: var(--dark);
+  border: solid 2px var(--light);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 99px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 18px;
+}
+
+
+/* SCROLL DOWN */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: black;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  overflow: visible;
+}
+.scroll-down .arrow {
+  position: relative;
+  top: -4px;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHBhdGggZmlsbD0iYmxhY2siIGQ9Ik00ODMuMiwxOTIuMmMtMjAuNS0yMC41LTUzLjUtMjAuOC03My43LTAuNkwyNTcsMzQ0LjFMMTA0LjUsMTkxLjZjLTIwLjItMjAuMi01My4yLTE5LjktNzMuNywwLjYKCWMtMjAuNSwyMC41LTIwLjgsNTMuNS0wLjYsNzMuN2wxOTAsMTkwYzEwLjEsMTAuMSwyMy40LDE1LjEsMzYuOCwxNWMxMy4zLDAuMSwyNi43LTQuOSwzNi44LTE1bDE5MC0xOTAKCUM1MDMuOSwyNDUuNyw1MDMuNywyMTIuNyw0ODMuMiwxOTIuMnoiLz4KPC9zdmc+);
+  background-size: contain;
+}
+
+.panel {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.boxes-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 span {
+  color:var(--color-shockingly-green);
+}
+
+#map { height: 180px; }

@@ -1,32 +1,18 @@
-'use client';
+import WholeTextThingy from "./components/WholeTextThingy"; 
+import dynamic from "next/dynamic";
+import { useMemo } from "react";
 
-import { useChat } from 'ai/react';
 
-export default function Chat() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
-  return (
-    <div>
-      <div className="flex flex-col h-dvh">
-        <div className="flex-grow h-0 overflow-y-auto">
-          <div className="flex flex-col w-full max-w-lg py-24 mx-auto">
-            {messages.map(m => (
-              <div key={m.id} className={m.role === 'user' ? "chat chat-end" : "chat chat-start"}>
-                <div className={m.role === 'user' ? "chat-bubble chat-bubble-primary" : "chat-bubble chat-bubble-secondary"}> {m.content} </div>
-              </div>
-            ))}
-          </div>
+const LazyMap = dynamic(() => import("./components/Map"), {
+    ssr: false,
+    loading: () => <p>Loading...</p>,
+  });
+
+export default function Home(){
+    return (
+        <div>
+            <WholeTextThingy />
+            <LazyMap />
         </div>
-        <footer className="footer footer-center p-4 text-base-content bg-base-300">
-          <form className='w-full' onSubmit={handleSubmit}>
-            <input
-              className="input input-bordered input-primary w-full max-w-lg"
-              value={input}
-              placeholder="Say something..."
-              onChange={handleInputChange}
-            />
-          </form>
-        </footer>
-      </div>
-    </div>
-  );
+    )
 }

@@ -13,16 +13,25 @@
     "build-cf-types": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.0",
     "ai": "^3.0.19",
     "daisyui": "^4.10.1",
+    "gsap": "^3.12.5",
+    "leaflet": "^1.9.4",
+    "leaflet-defaulticon-compatibility": "^0.1.2",
+    "leaflet-geosearch": "^3.11.1",
     "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-leaflet": "^4.2.1",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "@cloudflare/ai": "^1.1.0",
     "@cloudflare/next-on-pages": "^1.11.0",
     "@cloudflare/workers-types": "^4.20240405.0",
+    "@types/leaflet": "^1.9.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -30,8 +39,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-next-on-pages": "^1.11.0",
+    "json-loader": "^0.5.7",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5",
     "vercel": "^32.3.0",
     "wrangler": "^3.48.0"

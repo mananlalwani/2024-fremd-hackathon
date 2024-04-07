@@ -10,6 +10,7 @@ export const runtime = 'edge';
 export async function POST(req: NextRequest) {
     const resJson: any = await req.json();
     let messages: any = resJson["messages"];
+    console.log(messages);
 
     const ai = new Ai(getRequestContext().env.AI);
     const stream = await ai.run("@cf/meta/llama-2-7b-chat-fp16", {

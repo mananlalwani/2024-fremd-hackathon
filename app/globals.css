@@ -285,7 +285,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--color-shockingly-pink);
+  border: 2px solid var(--dark);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   font-weight: 600;
   color: var(--dark);
   line-height: 1.4;
@@ -405,7 +406,7 @@ h4,
 }
 
 a {
-  color: var(--green);
+  color: var(--color-blue);
   font-weight: bold;
   text-decoration: none;
 }

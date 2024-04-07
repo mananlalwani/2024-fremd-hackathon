@@ -602,3 +602,5 @@ button {
 h1 span {
   color:var(--color-shockingly-green);
 }
+
+#map { height: 180px; }

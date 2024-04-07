@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: "Suicide Awareness Site",
 };
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{

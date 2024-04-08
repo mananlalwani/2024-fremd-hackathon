@@ -9,35 +9,15 @@ import { FaDownLong } from "react-icons/fa6";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-if (typeof window !== "undefined") {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
-}
+
 
 export default function Home() {
   const main = useRef<HTMLElement | any>();
   gsap.defaults({ ease: "none" });
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    // Function to check if the device is a mobile
-    const checkMobile = () => {
-      const mobileViewportWidth = 768; // You can adjust this value based on your needs
-      const isMobileDevice = window.innerWidth <= mobileViewportWidth;
-      setIsMobile(isMobileDevice);
-    };
-
-    // Initial check
-    checkMobile();
-
-    // Event listener for window resize
-    window.addEventListener("resize", checkMobile);
-
-    // Cleanup event listener on component unmount
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+ 
   useGSAP(() => {
-    if (isMobile) {
-      return;
-    }
+    
 
     const boxes = gsap.utils.toArray(".box") as HTMLElement[];
     boxes.forEach((box: HTMLElement) => {

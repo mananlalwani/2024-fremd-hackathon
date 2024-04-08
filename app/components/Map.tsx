@@ -1,11 +1,15 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
+
 import "leaflet/dist/leaflet.css";
+
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css";
+
 import "leaflet-defaulticon-compatibility";
-import { GeoJsonObject } from "geojson";
+
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+
 import Legend from "./Legend";
 
 export default function Map() {

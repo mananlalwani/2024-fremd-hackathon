@@ -1,16 +1,22 @@
 "use client";
 
 import { useRef } from "react";
+
 import gsap from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { TextPlugin } from "gsap/TextPlugin";
+
 import { useGSAP } from "@gsap/react";
+
 import { FaDownLong } from "react-icons/fa6";
+
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 
+if (typeof window !== "undefined"){
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
-
+}
 
 export default function Home() {
   const main = useRef<HTMLElement | any>();

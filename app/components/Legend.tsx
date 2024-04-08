@@ -1,6 +1,9 @@
 import L from "leaflet";
+
 import { useMap } from "react-leaflet";
+
 import "./Legend.css";
+
 import { useEffect } from "react";
 
 function Legend() {

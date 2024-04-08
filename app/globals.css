@@ -116,6 +116,7 @@ body {
   --color-svg-gradient: radial-gradient(70.77% 70.77% at 0% 70.77%, #ffd9b0 0%, #fd9f3b 80.73%, #ff8709 100%);
   --color-svg-heading-gradient: linear-gradient(180deg, #ffbd77 0%, rgba(254, 197, 251, 0) 100%), #ffe4c7;
   --color-ui-blue: #bef3fe;
+  --color-ui-green: #d6ffc3;
   --color-ui-blue-lt: #e1faff;
   --color-ui-blue-codeblk: #f6feff;
   --color-ui-text-gradient: linear-gradient(168.89deg, #fec5fb -21.3%, #00bae2 89.88%);
@@ -280,13 +281,13 @@ body {
   width: fit-content;
   height: fit-content;
   border-radius: 24px;
-  padding: 5%;
+  padding: 3%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   border: 2px solid var(--dark);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   font-weight: 600;
   color: var(--dark);
   line-height: 1.4;
@@ -409,6 +410,7 @@ a {
   color: var(--color-blue);
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease-in-out
 }
 a:hover {
   text-decoration: underline;
@@ -489,9 +491,28 @@ button {
 }
 
 h1 span {
-  color: var(--color-shockingly-green);
+  color: var(--color-blue);
+}
+
+div section {
+  background-color: var(--color-ui-blue);
+}
+
+.facts {
+  background-color: var(--color-ui-green);
+  padding: auto;
 }
 
 #map {
   height: 180px;
+}
+
+.bordered {
+  border: 5px solid var(--dark);
+  border-radius: 24px;
+  padding: 5%;
+}
+
+.gradient {
+  background: var(--color-ui-gradient-background);
 }

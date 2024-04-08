@@ -1,3 +1,6 @@
-# 2024-fremd-hackathon
+# Lifeline Link
 
-hackathon-ayg.pages.dev
+Ryan Kim  
+Manan Lalwani  
+
+https://hackathon-ayg.pages.dev

@@ -7,8 +7,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import { FaDownLong } from "react-icons/fa6";
 import Link from "next/link";
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from "react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
@@ -30,13 +29,12 @@ export default function Home() {
     checkMobile();
 
     // Event listener for window resize
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
     // Cleanup event listener on component unmount
-    return () => window.removeEventListener('resize', checkMobile);
- }, []);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
   useGSAP(() => {
-    
     if (isMobile) {
       return;
     }
@@ -115,29 +113,53 @@ export default function Home() {
         </h1>
         <div className="flex-center column">
           <button className="center">
-            <div>Learn more </div>
+            <div>Scroll to learn more </div>
             <FaDownLong className="center" />
           </button>
           <button>
-            <Link href={"/resources"}>Resources</Link>
+            <Link href={"/resources"}>Access Resources</Link>
           </button>
         </div>
+        <br />
+        <br />
+        <br />
       </section>
-      <br />
-      <br />
-      <br />
-      <div className="section flex-center column" ref={main}>
-        <div className="box">Suicide is the 11th leading cause of death in the United States.<sup>1</sup></div>
+
+      <div className="section column flex-center facts" ref={main}>
         <br />
         <br />
-        <div className="box">In 2021, there were an estimated 1.7 million suicide attempts.<sup>1</sup></div>
         <br />
         <br />
-        <div className="box">On average, there are 132 suicides per day.<sup>1</sup></div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div className="box">
+          Suicide is the 11th leading cause of death in the United States.<sup>1</sup>
+        </div>
+        <br />
+        <br />
+        <div className="box">
+          In 2021, there were an estimated 1.7 million suicide attempts.<sup>1</sup>
+        </div>
+        <br />
+        <br />
+        <div className="box">
+          On average, there are 132 suicides per day.<sup>1</sup>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
       </div>
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

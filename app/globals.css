@@ -515,7 +515,13 @@ div section {
 .bordered {
   border: 5px solid var(--dark);
   border-radius: 24px;
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width:70%;
+  position:relative;
+  left:15%;
 }
 
 .gradient {

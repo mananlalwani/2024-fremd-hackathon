@@ -82,10 +82,6 @@ export default function Home() {
         .to(elements, {
           duration: 2,
           text: " is stigmatized.",
-        })
-        .to(elements, {
-          duration: 2,
-          text: " is tragic.",
         });
     },
     { scope: main }
